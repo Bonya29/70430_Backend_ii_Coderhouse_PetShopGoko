@@ -1,0 +1,30 @@
+{{>header}}
+<main>
+    <div class="cont-logo-logreg">
+        <img class="logo" src="assets/logo.png" alt="">
+    </div>
+    <div class="cont-form"><div id="form" class="form">
+        <h2 class="form-title">Iniciar Sesión</h2>
+        <div class="inputs">
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div class="input">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password">
+            </div>
+        </div>
+        <div class="btns">
+        <button onclick="userLogin()" class="add">Iniciar Sesion</button>
+        </div>
+        <div class="form-nav">
+            <p>¿No tienes una cuenta? <a href="/register">Registrarse</a></p>
+            <a href="/api/sessions/current">¡CURRENT!</a>
+            <button onclick="info()" style="width: 20px; height: 20px">?</button>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/login.js"></script>

@@ -1,0 +1,42 @@
+{{>header}}
+<main>
+    <div class="cont-logo-logreg">
+        <img class="logo" src="assets/logo.png" alt="">
+    </div>
+    <div class="cont-form">
+        <div id="form" class="form">
+            <h2 class="form-title">Registrarse</h2>
+            <div class="inputs">
+                <div class="input">
+                    <label for="first_name">Nombre</label>
+                    <input type="text" id="first_name">
+                </div>
+                <div class="input">
+                    <label for="last_name">Apellido</label>
+                    <input type="text" id="last_name">
+                </div>
+                <div class="input">
+                    <label for="edad">Edad</label>
+                    <input type="number" id="age">
+                </div>
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="input">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password">
+                </div>
+            </div>
+            <div class="btns">
+            <button onclick="registerUser()" class="add">Crear Cuenta</button>
+            </div>
+            <div class="form-nav">
+                <p>¿Ya tienes una cuenta? <a href="/login">Iniciar Sesion</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/register.js"></script>
