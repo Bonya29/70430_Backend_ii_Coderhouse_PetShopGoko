@@ -1,6 +1,7 @@
 async function registerUser() {
     let first_name = document.getElementById('first_name').value
     let last_name = document.getElementById('last_name').value
+    let gender = document.getElementById('gender').value
     let age = document.getElementById('age').value
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
@@ -18,7 +19,7 @@ async function registerUser() {
             icon: "error",
         })
     }
-    let userData = { first_name, last_name, age, email, password }
+    let userData = { first_name, last_name, gender, age, email, password }
     try {
         let response = await fetch('/api/sessions/register', {
             method: 'POST',
@@ -35,6 +36,9 @@ async function registerUser() {
             title: "Cuenta Creada",
             text: "Tu cuenta ha sido creada con exito, ahora puedes iniciar sesión.",
             icon: "success",
+        })
+        .then(() => {
+            window.location.href = '/login'
         })
     } catch (error) {
         Swal.fire({

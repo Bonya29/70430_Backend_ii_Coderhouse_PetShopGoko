@@ -1,0 +1,36 @@
+{{>header}}
+
+<main>
+    <div class="cont-logo">
+        <img class="logo" src="assets/logo.png" alt="">
+    </div>
+    <div class="user-card">
+        <h1 class="user-card-title">Mis Datos</h1>
+        <div>
+            <h4>Usuario</h4>
+            <p id="fullname"></p>
+        </div>
+        <div>
+            <h4>Email</h4>
+            <p id="email"></p>
+        </div>
+        <div>
+            <h4>Genero</h4>
+            <p id="gender"></p>
+        </div>
+        <div>
+            <h4>Edad</h4>
+            <p id="age"></p>
+        </div>
+        <div>
+            <h4>Tipo de Cuenta</h4>
+            <p id="role"></p>
+        </div>
+    </div>
+    <div class="btns" style="flex-direction: column;">
+        <button onclick="logout()" class="del">Cerrar Sesion</button>
+        <button onclick="deleteUser()" class="del">Eliminar Cuenta</button>
+    </div>
+</main>
+
+<script src="js/profile.js"></script>

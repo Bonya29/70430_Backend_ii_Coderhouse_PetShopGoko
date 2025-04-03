@@ -26,6 +26,9 @@ async function userLogin() {
             text: "Has iniciado sesión con exito",
             icon: "success"
         })
+        .then(() => {
+            window.location.href = '/home'
+        })
     } catch (error) {
         Swal.fire({
             title: "Error",
