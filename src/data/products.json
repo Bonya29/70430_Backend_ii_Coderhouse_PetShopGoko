@@ -1,0 +1,262 @@
+[
+	{
+		"image": "/assets/products/excellent_urinary_gato.png",
+		"title": "Alimento Excellent Urinary para Gato Adulto 7.5kg",
+		"description": "Alimento balanceado para gatos adultos sabor pollo en bolsa de 7.5kg",
+		"price": 50000,
+		"stock": 30,
+		"category": "Alimentos",
+		"code": "A1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/purina_cat_chow_gato.png",
+		"title": "Alimento Humedo Purina Cat Chow Gatos Castrados",
+		"description": "Alimento humedo Purina Cat Chow Para Gatos Castrados Sabor Pescado 15 Sobres X 85 Grs",
+		"price": 20000,
+		"stock": 20,
+		"category": "Alimentos",
+		"code": "A2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/dogpro_perro.png",
+		"title": "Alimento Dogpro para Perros 20kg",
+		"description": "Alimento Dogpro para perro adulto de todos los tamaños en bolsa de 20kg",
+		"price": 50000,
+		"stock": 15,
+		"category": "Alimentos",
+		"code": "A3",
+		"status": true
+	},
+	{
+		"image": "/assets/products/royal_canin_perro_cachorro.png",
+		"title": "Alimento Royal Canin Perro Cachorro 15kg",
+		"description": "Alimento Royal Canin Size Health Nutrition Maxi Puppy para perro cachorro de raza grande sabor mix de 15 kg",
+		"price": 90000,
+		"stock": 25,
+		"category": "Alimentos",
+		"code": "A4",
+		"status": true
+	},
+	{
+		"image": "/assets/products/purina_gato_cachorro.png",
+		"title": "Alimento Purina Excellent Kitten Gato Cachorro 7.5kg",
+		"description": "Alimento Purina Excellent Kitten para gato de temprana edad en bolsa de 7.5 kg",
+		"price": 47000,
+		"stock": 10,
+		"category": "Alimentos",
+		"code": "A5",
+		"status": true
+	},
+	{
+		"image": "/assets/products/heno_timothy_roedores.png",
+		"title": "Heno Timothy para Roedores 600g",
+		"description": "Heno Timothy para cobayos, conejos, chinchillas y hamsters en paquete de 600g",
+		"price": 10000,
+		"stock": 20,
+		"category": "Alimentos",
+		"code": "A6",
+		"status": true
+	},
+	{
+		"image": "/assets/products/tetramin_peces_tropicales.png",
+		"title": "Alimento TetraMin Peces Tropicales",
+		"description": "Comida en escamas TetraMin para peces tropicales en envase de 62g",
+		"price": 14000,
+		"stock": 13,
+		"category": "Alimentos",
+		"code": "A7",
+		"status": true
+	},
+	{
+		"image": "/assets/products/tetrafin_peces_agua_fria.png",
+		"title": "Alimento Tetrafin Peces de Agua Fría",
+		"description": "Alimento Tetrafin en escamas para peces de agua fría en envase de 62g",
+		"price": 10000,
+		"stock": 12,
+		"category": "Alimentos",
+		"code": "A8",
+		"status": true
+	},
+	{
+		"image": "/assets/products/pelota_ball-e.png",
+		"title": "Pelota Interactiva Ball-e Rosa",
+		"description": "Juguete pelota interactiva Ball-e Beepaw de silicona para gatos Y perros color rosa",
+		"price": 10000,
+		"stock": 5,
+		"category": "Juguetes",
+		"code": "B1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/ratoncitos_felpa_tela.png",
+		"title": "Ratoncitos de Tela",
+		"description": "Ratoncitos de felpa y tela para gatos 3 Unidades",
+		"price": 2500,
+		"stock": 30,
+		"category": "Juguetes",
+		"code": "B2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/cuerda_trenzada.png",
+		"title": "Cuerda trenzada para Morder",
+		"description": "Cuerda de colores para juegos de fuerza con perros 18 x 7 cm",
+		"price": 2000,
+		"stock": 3,
+		"category": "Juguetes",
+		"code": "B3",
+		"status": true
+	},
+	{
+		"image": "/assets/products/transportin_plastico.png",
+		"title": "Transportín Plástico para Mascotas",
+		"description": "Transportadora Canil para perro y gato. 50cm de ancho y 70cm de largo, soporta hasta 11kg",
+		"price": 105000,
+		"stock": 10,
+		"category": "Transportines",
+		"code": "C1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/transportin_tela.png",
+		"title": "Bolso Transportín para Mascotas",
+		"description": "Transportín de tela liviano para perro y gato. 24cm de ancho, 52cm de largo y 35cm de alto",
+		"price": 100000,
+		"stock": 7,
+		"category": "Transportines",
+		"code": "C2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/transportin_bolso.png",
+		"title": "Bolso Mochila para Mascotas Pequeñas",
+		"description": "Bolso con respiraderos y ventana para gatos o perros pequeños",
+		"price": 25000,
+		"stock": 8,
+		"category": "Transportines",
+		"code": "C3",
+		"status": true
+	},
+	{
+		"image": "/assets/products/jaulon_pajaros.png",
+		"title": "Jaulon Grande para Pájaros ",
+		"description": "Jaula metálica con ruedas, perchas y comederos incluidos 85 x 72 x 165",
+		"price": 850000,
+		"stock": 2,
+		"category": "Jaulas",
+		"code": "D1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/jaula_chica_pajaros.png",
+		"title": "Jaula Chica para Pajaros Roja",
+		"description": "Jaula pequeña color Rojo, ideal para canarios o aves similares",
+		"price": 32000,
+		"stock": 4,
+		"category": "Jaulas",
+		"code": "D2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/jaula_hamster.png",
+		"title": "Jaula para Hámster Verde",
+		"description": "Jaula con decoraciones, ruedas y comedero para hámsters color verde",
+		"price": 25000,
+		"stock": 3,
+		"category": "Jaulas",
+		"code": "D3",
+		"status": true
+	},
+	{
+		"image": "/assets/products/pecera_cubo.png",
+		"title": "Pecera de 64 Litros",
+		"description": "Pecera Cubo de vidrio 40x40 cm de 64 litros",
+		"price": 35000,
+		"stock": 0,
+		"category": "Peceras",
+		"code": "E1",
+		"status": false
+	},
+	{
+		"image": "/assets/products/pecera_completa.png",
+		"title": "Kit Pecera Completa de 24 Litros",
+		"description": "Pecera completa con filtro, aireador y luz led de 24 litros",
+		"price": 50000,
+		"stock": 2,
+		"category": "Peceras",
+		"code": "E2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/correa_reforzada.png",
+		"title": "Correa Reforzada Azul",
+		"description": "Correa reforzada de poliester y plastico con gancho de metal de 1.5m de color celeste",
+		"price": 3000,
+		"stock": 9,
+		"category": "Correas",
+		"code": "F1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/correa_extensible.png",
+		"title": "Correa Extensible Automatica Gris",
+		"description": "Correa extensible de nailon y plastico con gancho de metal de 8m de color gris",
+		"price": 17000,
+		"stock": 5,
+		"category": "Correas",
+		"code": "F2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/arnes_reforzado.png",
+		"title": "Arnes Pretal Reforzado para Perros",
+		"description": "Arnés pretal H táctico reforzado anti tirones ajustable para perros",
+		"price": 27000,
+		"stock": 7,
+		"category": "Correas",
+		"code": "F3",
+		"status": true
+	},
+	{
+		"image": "/assets/products/pulguicida_power.png",
+		"title": "Pulguicida Comprimido Power para Gatos y Perros",
+		"description": "Pulguicida comprimido saborizado Power para gatos de 3 a 6 kg y perros de 5 a 10 kg",
+		"price": 10000,
+		"stock": 12,
+		"category": "Desparasitantes",
+		"code": "G1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/pipeta_perros_revolution.png",
+		"title": "Pipeta Desparasitante Revolution para Perros",
+		"description": "Pipeta desparasitante Revolution para perros de 10 a 20 kg",
+		"price": 14000,
+		"stock": 6,
+		"category": "Desparasitantes",
+		"code": "G2",
+		"status": true
+	},
+	{
+		"image": "/assets/products/shampoo_greenwood.png",
+		"title": "Shampoo Greenwood para Perros y Gatos 500ml",
+		"description": "Shampoo Greenwood de 500ml fragancia suave para perros y gatos",
+		"price": 3000,
+		"stock": 10,
+		"category": "Limpieza",
+		"code": "H1",
+		"status": true
+	},
+	{
+		"image": "/assets/products/espuma_seca_pauldip.png",
+		"title": "Espuma Seca Pauldip para Perros y Gatos 215ml",
+		"description": "Espuma Seca Pauldip para perros y gatos de 215ml",
+		"price": 9000,
+		"stock": 11,
+		"category": "Limpieza",
+		"code": "H2",
+		"status": true
+	}
+]
