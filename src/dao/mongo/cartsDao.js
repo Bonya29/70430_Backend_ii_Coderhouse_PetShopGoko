@@ -50,4 +50,9 @@ export class cartsDaoMongo {
         return await cartsModel.findByIdAndDelete(cid)
     }
 
+    deleteProductsFromCartByIdAfterPurchase = async (cid) => {
+        const cart = await cartsModel.findById(cid)
+        cart.products = []
+        return await cart.save()
+    }
 }

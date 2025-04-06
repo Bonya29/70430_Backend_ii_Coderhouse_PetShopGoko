@@ -19,6 +19,10 @@ export class productsRepository {
         return await this.productsDao.updateProductById(id, newProduct)
     }
 
+    updateProductStockById = async (pid, quantity) => {
+        return await this.productsDao.updateProductStockById(pid, quantity)
+    }
+
     deleteProductById = async (id) => {
         return await this.productsDao.deleteProductById(id)
     }

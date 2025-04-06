@@ -29,6 +29,13 @@ export class productsController {
         res.send({ product })
     }
 
+    updateProductStockById = async (req, res) => {
+        const { pid } = req.params
+        const { quantity } = req.body
+        const product = await this.productsService.updateProductStockById(pid, quantity)
+        res.send({ product })
+    }
+
     deleteProductById = async (req, res) => {
         const { pid } = req.params
         const product = await this.productsService.deleteProductById(pid)

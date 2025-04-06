@@ -17,6 +17,12 @@ export class productsDaoMongo {
         return await productsModel.findByIdAndUpdate(id, newProduct)
     }
 
+    updateProductStockById = async (pid, quantity) => {
+        const product = await productsModel.findById(pid)
+            product.stock -= quantity
+        return await product.save()
+    }
+
     deleteProductById = async (id) => {
         return await productsModel.findByIdAndDelete(id)
     }
