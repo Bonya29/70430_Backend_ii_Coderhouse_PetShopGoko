@@ -41,8 +41,8 @@ async function userLogin() {
 
 function info() {
     Swal.fire({
-        title: "Usuarios para ingresar a current",
-        html: "<strong>Admin 1:</strong><br>Email: admin1@example.com <br>Contraseña: qwer1234 <br><br><strong>Admin 2:</strong><br>Email: admin2@example.com <br>Contraseña: 1234qwer",
+        title: "Usuario Admin",
+        html: "<br><b>Email:</b> admin1@example.com<br><br><b>Contraseña:</b> qwer1234",
         icon: "info"
     })
 }

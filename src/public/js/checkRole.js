@@ -22,15 +22,12 @@ async function checkRole() {
         profile.style.display = 'flex'
         login.style.display = 'none'
         
-        const response = await fetch('/api/carts/' + user.cartId, {
+        const response = await fetch(`/api/carts/${user.cartId}`, {
             method: 'GET',
         })
+
         const data = await response.json()
-        if (!data.cart) {
-            cartCount.textContent = "0"
-        } else {
-            cartCount.textContent = data.cart.products.length
-        }
+        cartCount.textContent = data.cart.products.length
     }
 }
 

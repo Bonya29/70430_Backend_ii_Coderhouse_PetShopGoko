@@ -37,12 +37,31 @@ async function deleteUser() {
     const data = await response.json()
     const user = data.user
     
-
-    await fetch('/api/sessions/deleteAccount/' + user.id, {
-        method: 'DELETE',
-        credentials: 'include'
+    Swal.fire({
+        title: "Confirmar Eliminación",
+        html: `¿Estas seguro que quieres eliminar tu cuenta?<br>Se borraran todos tus datos.`,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Eliminar",
+        cancelButtonText: "Cancelar"
     })
-    .then(() => logout())
+    .then( async (result) => {
+        if (result.isConfirmed) {
+            await fetch('/api/sessions/deleteAccount/' + user.id, {
+                method: 'DELETE',
+                credentials: 'include'
+            })
+            .then(() => Swal.fire({
+                title: "Cuenta Eliminada!",
+                text: "Tu cuenta ha sido eliminada con exito",
+                icon: "success"
+                })
+                .then(() => logout())
+            )
+        }
+    })
 }
 
 

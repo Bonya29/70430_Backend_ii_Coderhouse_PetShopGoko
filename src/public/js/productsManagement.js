@@ -11,7 +11,7 @@ async function showProducts() {
             <p>${product.description}</p>
             <p class="price">$${product.price}</p>
             <p class="stock">Unidades Disponibles<br>${product.stock}</p>
-            <div class="btns" style="margin: auto 0 0 0;"><button class="upd">Editar</button><button class="del">X</button></div>
+            <div class="btns" style="margin: auto 0 0 0;"><button class="upd">Editar</button><button class="del">Eliminar</button></div>
         </div>
         `
     })
