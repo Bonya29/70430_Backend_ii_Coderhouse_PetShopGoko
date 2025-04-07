@@ -42,7 +42,7 @@ async function showCart() {
             cartAmount += product.product.price * product.quantity
         })
         cartAmountContainer.innerHTML = `
-            <div class="btns" style="margin: 0 0 2rem 27rem;"><b>Total del Carrito: $${cartAmount}</b><button class="upd" onclick="loadCheckOutModal('${user.cartId}', ${cartAmount}, '${user.email}')">Proceder al Pago</button></div>
+            <div class="btns" style="margin: 0 0 2rem 27rem;"><b>Total del Carrito: $${cartAmount}</b><button class="upd" onclick="checkStockAndProceed('${user.cartId}', ${cartAmount}, '${user.email}')">Proceder al Pago</button></div>
             `
     }
 }
@@ -73,7 +73,7 @@ async function decreaseQuantity(cartId, pid, quantity) {
 }
 
 async function increaseQuantity(cartId, pid, stock, quantity) {
-    if (quantity === stock) {
+    if (quantity >= stock) {
         Swal.fire({
             toast: true,
             title: "No hay mas stock disponible",
@@ -255,18 +255,50 @@ async function loadCheckOutModal(cid, amount, purchaser) {
 
     if (response.ok) {
         Swal.fire({
+            icon: 'success',
             title: '¡Compra Realizada!',
             html: `
-                <p>¿Gracias por tu compra!</p>
+                <p>¡Gracias por tu compra!</p>
                 <p>El código de tu compra es: <b>${code}</b></p>
                 <p>¡Guardalo bien! Lo necesitarás para recibir tu pedido.</p>
             `,
-            icon: 'success',
         })
         .then(() => {
             window.location.href = '/cart'
         })
     }
 }
+
+async function verifyCartStock(cartId) {
+    const response = await fetch(`/api/carts/${cartId}/products`, {
+        method: 'GET'
+    })
+    const data = await response.json()
+    const cart = data.cart
+
+    for (const item of cart.products) {
+        const stock = item.product.stock
+        const quantity = item.quantity
+        const title = item.product.title
+
+        if (stock < quantity) {
+            await Swal.fire({
+                icon: 'error',
+                title: 'Stock insuficiente',
+                text: `El producto "${title}" no tiene el stock suficiente para realizar la compra. Reduce la cantidad o elimínalo del carrito para continuar.`,
+            })
+            return false
+        }
+    }
+
+    return true
+}
+
+async function checkStockAndProceed(cartId, amount, email) {
+    const stockIsValid = await verifyCartStock(cartId)
+    if (!stockIsValid) return
+    loadCheckOutModal(cartId, amount, email)
+}
+
 
 showCart()

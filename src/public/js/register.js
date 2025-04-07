@@ -12,6 +12,7 @@ async function registerUser() {
             icon: "error",
         })
     }
+
     if (age < 13) {
         return Swal.fire({
             title: "Edad Insuficiente",
@@ -19,6 +20,15 @@ async function registerUser() {
             icon: "error",
         })
     }
+
+    if (email && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email)) {
+        return Swal.fire({
+            title: "Email Invalido",
+            text: "Por favor, ingresa un email valido.",
+            icon: "error",
+        })
+    }
+
     let userData = { first_name, last_name, gender, age, email, password }
     try {
         let response = await fetch('/api/sessions/register', {
@@ -48,4 +58,18 @@ async function registerUser() {
         })
         console.error("Error en el registro:", error)
     }
+}
+
+function info() {
+    Swal.fire({
+        title: "Recomendacion de Email",
+        html: `
+            <p>Recomendamos que uses el siguiente Email para registrarte:</p>
+            <p>petshopgokouser@yopmail.com</p>
+            <br>
+            <p>Puedes ver los mails que te enviemos ingresando la direccion del mail en la siguiente pagina de mails temporales:</p>
+            <a href="https://yopmail.com" target="_blank">https://yopmail.com</a>
+        `,
+        icon: "info"
+    })
 }

@@ -1,6 +1,7 @@
 import { cartsService } from "../services/services.js"
 import { productsService } from "../services/services.js"
 import { ticketsService } from "../services/services.js"
+import { sendPurchaseEmail } from "../utils/sendPurchaseEmail.js"
 
 export class cartsController {
     constructor() {
@@ -41,6 +42,8 @@ export class cartsController {
 
     deleteProductsFromCartByIdAfterPurchase = async (req, res) => {
         const { cid } = req.params
+        const to = req.body.purchaser
+        const code = req.body.code
         const cart = await this.cartsService.getCardByIdWithPopulate(cid)
         await this.ticketsService.createTicket({ ...req.body })
         
@@ -51,6 +54,9 @@ export class cartsController {
         }
 
         const updatedCart = await this.cartsService.deleteProductsFromCartByIdAfterPurchase(cid)
-        res.status(200).json({ message: 'Productos eliminados del carrito', cart: updatedCart })
+
+        
+        await sendPurchaseEmail(to, code)
+        res.status(200).json({ message: 'Compra realizada, carrito vaciado, ticket creado y mail enviado al cliente'})
     }
 }
