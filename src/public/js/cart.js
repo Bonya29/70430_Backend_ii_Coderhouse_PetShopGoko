@@ -12,11 +12,14 @@ async function showCart() {
     data = await response.json()
     const cart = data.cart
 
+    const cartAmountContainer = document.getElementById('cart-amount')
+
     if (cart.products.length === 0) {
         const cartContainer = document.getElementById('cart-container')
         cartContainer.innerHTML = `
             <h2>Tu carrito esta vacio, añade productos para empezar a armarlo</h2>
         `
+        cartAmountContainer.innerHTML = ''
     } else {
         const cartContainer = document.getElementById('cart-container')
         cartContainer.innerHTML = ''
@@ -36,7 +39,6 @@ async function showCart() {
             `
         })
 
-        const cartAmountContainer = document.getElementById('cart-amount')
         let cartAmount = 0
         cart.products.forEach(product => {
             cartAmount += product.product.price * product.quantity
